@@ -15,6 +15,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "",
+          "pathName": "pages/index3/certification/doctorUpdata/doctorUpdataDetail/doctorUpdataDetail",
+          "query": "_id=b751f280657464df02be9ea000878689",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "个人页面",
           "pathName": "pages/index3/index3",
           "query": "",

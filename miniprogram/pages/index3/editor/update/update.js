@@ -216,7 +216,7 @@ Page({
         .update({
           data: {
             avatarUrl:
-              "cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/user_info/avatar/" +
+              "cloud://mobile-app-dev-5ghxm1jwd77edd2b/user_info/avatar/" +
               introImageName,
             nickName: this.data.nickName,
           },

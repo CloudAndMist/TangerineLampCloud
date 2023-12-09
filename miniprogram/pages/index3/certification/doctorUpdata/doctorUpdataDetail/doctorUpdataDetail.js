@@ -159,30 +159,32 @@ Page({
     let doctorSelfPicName = ""; // 医生照片
     
     //判断介绍图片格式并重命名
-    if(this.data.doctorProof.endsWith(".jpg")){
-      doctorProofName = this.data.certiName + "_doctorProof.jpg"
-    }else if(this.data.doctorProof.endsWith(".png")){
-      doctorProofName = this.data.certiName + "_doctorProof.png"
-    }else if(this.data.doctorProof.endsWith(".svg")){
-      doctorProofName = this.data.certiName + "_doctorProof.svg"
-    }
-    if(this.data.doctorProof.endsWith(".jpg")){
+    // if(this.data.doctorProof.endsWith(".jpg")){
+    //   doctorProofName = this.data.certiName + "_doctorProof.jpg"
+    // }else if(this.data.doctorProof.endsWith(".png")){
+    //   doctorProofName = this.data.certiName + "_doctorProof.png"
+    // }else if(this.data.doctorProof.endsWith(".svg")){
+    //   doctorProofName = this.data.certiName + "_doctorProof.svg"
+    // }
+    console.log(this.data.doctorSelfPic)
+    if(this.data.doctorSelfPic.endsWith(".jpg")){
       doctorSelfPicName = this.data.certiName + "_doctorSelfPic.jpg"
-    }else if(this.data.doctorProof.endsWith(".png")){
+    }else if(this.data.doctorSelfPic.endsWith(".png")){
       doctorSelfPicName = this.data.certiName + "_doctorSelfPic.png"
-    }else if(this.data.doctorProof.endsWith(".svg")){
+    }else if(this.data.doctorSelfPic.endsWith(".svg")){
       doctorSelfPicName = this.data.certiName + "_doctorSelfPic.svg"
     }
 
     //图片上传至云储存
-    this.cloudFile(doctorProofName, doctorSelfPicName);
+    // this.cloudFile(doctorProofName);
+    this.cloudFile(doctorSelfPicName, this.data.doctorSelfPic);
 
     //信息上传至数据库
     db.collection("doctors").doc(this.data._id)
     .update({
       data:{
-        proof:"cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index3/Certification/doctors/doctorProof/"+doctorProofName,
-        docSelfPic:"cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index3/Certification/doctors/doctorSelfPic/"+doctorSelfPicName,
+        // proof:"cloud://mobile-app-dev-5ghxm1jwd77edd2b/index3/Certification/doctors/doctorProof/"+doctorProofName,
+        docSelfPic:"cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index3/Certification/doctors/doctorSelfPic/"+doctorSelfPicName,
         level: this.data.level,
         name: this.data.certiName,
         school: this.data.school,
@@ -199,10 +201,10 @@ Page({
   },
 
   // 储存图片至云端
-  cloudFile(doctorProofName, doctorSelfPicName){
+  cloudFile(doctorSelfPicName, filePath){
     wx.cloud.uploadFile({
-      cloudPath:"index3/Certification/doctors/doctorSelfPic/"+doctorSelfPicName,
-      filePath:this.data.doctorSelfPic
+      cloudPath: "index3/Certification/doctors/doctorSelfPic/"+doctorSelfPicName,
+      filePath: filePath
     }).then(res=>{})
   },
 
@@ -217,6 +219,7 @@ Page({
         doctorProof: res.data.proof,
         doctorSelfPic: res.data.docSelfPic ? res.data.docSelfPic : "/icons/certi_add.png",
       })
+      console.log("res.data.doctorSelfPic:", this.data.doctorSelfPic)
     })
   },
 })
