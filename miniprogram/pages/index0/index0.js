@@ -23,12 +23,12 @@ Page({
     let isDeveloper=wx.getStorageSync('isDeveloper');
     let isDoctor=wx.getStorageSync('isDoctor')
     let isCertiStudent=wx.getStorageSync('isCertiStudent')
-    console.log('hasUserInfo',hasUserInfo)
-    console.log('openid',openid)
-    console.log('userInfo+',userInfo)
-    console.log('我是医生',isDoctor)
-    console.log('我是开发者',isDeveloper)
-    console.log('我是认证学生',isCertiStudent)
+    // console.log('hasUserInfo',hasUserInfo)
+    // console.log('openid',openid)
+    // console.log('userInfo+',userInfo)
+    // console.log('我是医生',isDoctor)
+    // console.log('我是开发者',isDeveloper)
+    // console.log('我是认证学生',isCertiStudent)
     if(hasUserInfo==true){
       app.globalData.openid=openid
       app.globalData.userInfo=userInfo
