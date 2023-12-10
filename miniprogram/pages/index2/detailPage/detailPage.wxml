@@ -8,7 +8,7 @@
 			<view class="hostHead">
 				<image wx:if="{{!isAnonymous}}" class="hostHeadImg" mode="aspectFill" src="{{headImg}}"></image>
 				<image wx:if="{{isAnonymous}}" class="hostHeadImg" mode="aspectFill"
-					src="cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index2/anonymous/normalAnonymous.svg">
+					src="/icons/user.png">
 				</image>
 			</view>
 			<view class="hostInfo">

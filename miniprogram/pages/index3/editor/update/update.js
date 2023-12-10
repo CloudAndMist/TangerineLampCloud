@@ -216,7 +216,7 @@ Page({
         .update({
           data: {
             avatarUrl:
-              "cloud://mobile-app-dev-5ghxm1jwd77edd2b/user_info/avatar/" +
+              "cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/user_info/avatar/" +
               introImageName,
             nickName: this.data.nickName,
           },

@@ -2,7 +2,7 @@
   <navigator url="/pages/index3/certification/doctorUpdata/doctorUpdataDetail/doctorUpdataDetail?_id={{item._id}}"
     class="freeTime_item" wx:for="{{docList}}" wx:for-item="item" wx:key="idTime" bindtap="chooseTime">
     <view class="picBlock">
-      <image src="{{item.proof}}" mode="aspectFill"></image>
+      <image src="{{item.docSelfPic}}" mode="aspectFill"></image>
     </view>
 
     <view class="leftBlock">
