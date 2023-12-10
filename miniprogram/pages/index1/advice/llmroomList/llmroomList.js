@@ -185,7 +185,7 @@ Page({
     var that = this
     var timeNow = Date.now()
     var groupId = this.data.openId+timeNow;
-    var members = [this.data.openId, "ojz6k6xpTsHUYAk2hLY1TNs2vH3E"];
+    var members = [this.data.openId];
     db.collection("chatroom_group_llm").add({
       //要提交一下时间戳 格林威治时间
       //预约的时间 统一格式

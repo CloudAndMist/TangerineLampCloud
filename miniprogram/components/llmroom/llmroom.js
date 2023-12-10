@@ -169,7 +169,7 @@ Component({
           _id: `${Math.random()}_${Date.now()}`,
           groupId: this.data.groupId,
           //avatar: this.data.userInfo.avatarUrl,
-          avatar:"cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index1/advice/小橘子.png",
+          avatar:"cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/avatar/橘子.png",
           nickName: this.data.userInfo.nickName,
           msgType: 'text',
           textContent: e.detail.value,
@@ -204,6 +204,52 @@ Component({
             } else return chat
           }),
         })
+        
+        /*
+            ---------------------------------------------
+                       修改发送文本后的返回消息
+            ---------------------------------------------
+        */
+        const doc_2 = {
+          _id: `${Math.random()}_${Date.now()}`,
+          _openid: '0',
+          groupId: this.data.groupId,
+          //avatar: this.data.userInfo.avatarUrl,
+          avatar:"cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/avatar/机器人.png",
+          nickName: 'LLM',
+          msgType: 'text',
+          textContent: 'LLM自动回复...',
+          sendTime: new Date(),
+          sendTimeTS: Date.now(), // fallback
+        }
+
+        db.collection(collection).add({
+          data: doc_2,
+        })
+
+        this.setData({
+          textInputValue: '',
+          chats: [
+            ...this.data.chats,
+            {
+              ...doc_2,
+              _openid: '0',
+              writeStatus: 'written',
+            },
+          ],
+        })
+
+        // this.setData({
+        //   chats: this.data.chats.map(chat => {
+        //     if (chat._id === doc._id) {
+        //       return {
+        //         ...chat,
+        //         writeStatus: 'written',
+        //       }
+        //     } else return chat
+        //   }),
+        // })
+
       }, '发送文字失败')
     },
 
@@ -216,7 +262,7 @@ Component({
           const doc = {
             _id: `${Math.random()}_${Date.now()}`,
             groupId: this.data.groupId,
-            avatar:"cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index1/advice/小橘子.png",
+            avatar:"cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/avatar/橘子.png",
             nickName: this.data.userInfo.nickName,
             msgType: 'image',
             sendTime: new Date(),
