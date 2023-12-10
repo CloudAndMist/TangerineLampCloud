@@ -10,11 +10,9 @@ Page({
   data: {
     //轮播图
     slides: [
-      { url: 'cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/comic/slide0.jpg' },
-      { url: 'cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/comic/slide1.jpg' },
-      { url: 'cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/comic/slide2.jpg' },
-      { url: 'cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/comic/slide3.jpg' },
-      { url: 'cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/comic/slide4.jpg' }
+      { url: 'cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/comic/swiper/1.jpg' },
+      { url: 'cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/comic/swiper/2.jpg' },
+      { url: 'cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/comic/swiper/3.png' }
     ],
     // item: 0,
     // tab: 0,

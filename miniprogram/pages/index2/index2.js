@@ -23,10 +23,9 @@ Page({
     study:"/pages/index2/logo/study.svg",
     // 轮播图
     picList: [
-      "cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index2/slides/slide0.jpg",
-      "cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index2/slides/slide1.jpg",
-      "cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index2/slides/slide2.jpg",
-      "cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index2/slides/slide3.jpg",
+      "cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index2/swiper/1.jpg",
+      "cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index2/swiper/2.jpg",
+      "cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index2/swiper/3.jpg"
     ],
     tempTreeholeName: null, // 临时存放树洞名称的地方
   },
