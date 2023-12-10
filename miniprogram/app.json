@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/index0/index0",
+    "pages/index0/index0/index0",
     "pages/index1/index1/index1",
     "pages/index2/index2",
     "pages/index2/editPage/personalEditor",
@@ -86,7 +86,7 @@
     "selectedColor": "#ff9933",
     "list": [
       {
-        "pagePath": "pages/index0/index0",
+        "pagePath": "pages/index0/index0/index0",
         "text": "每日分享",
         "iconPath": "icons/planet.png",
         "selectedIconPath": "icons/planet_active.png"
