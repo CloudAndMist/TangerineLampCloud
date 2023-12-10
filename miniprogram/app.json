@@ -72,7 +72,9 @@
     "pages/index3/addDoctor/addDoctor",
     "pages/index0/passage/passage/passage",
     "pages/index0/comic/comic/comic",
-    "pages/index0/music/music/music"
+    "pages/index0/music/music/music",
+    "pages/index1/advice/llmroomList/llmroomList",
+    "pages/index1/advice/room_llm/room_llm"
   ],
   "window": {
     "backgroundTextStyle": "light",

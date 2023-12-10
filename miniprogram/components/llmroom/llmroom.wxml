@@ -1,5 +1,4 @@
-<!--components/llmroom/llmroom.wxml-->
-<text>components/llmroom/llmroom.wxml</text><view class="chatroom">
+<view class="chatroom">
   <view class="header">
     <!-- display number of people in the room -->
     <view class="left"></view>

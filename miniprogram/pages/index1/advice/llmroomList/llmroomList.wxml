@@ -1,0 +1,49 @@
+<!--pages/index1/advice/adviceList/adviceList.wxml-->
+<wxs src="/utils/llmdate.wxs" module="filters"/>
+<view class="top">
+  <image class="targetImg" src="/icons/index1_appointmentList.png" alt="/icons/none_img.png"></image>
+  <text class="des">已咨询列表</text>
+</view>
+<view class="none"></view>
+<block wx:if="{{roomList.length===0}}">
+  <view class="noneAppointment">
+    暂无咨询记录
+  </view>
+</block>
+<block wx:else>
+  <view class="adviceList"
+  wx:for="{{roomList}}"
+  wx:key="advicekey"
+  data-timeCount="{{item.time}}"
+  data-groupId="{{item.groupId}}"
+  catchtap="navTo"
+  >
+    <view class="left">
+      <view>
+        大模型在线心理咨询
+      </view>
+      <view>
+        {{filters.formatDate(item.time)}}
+      </view>
+      <!-- <view>{{time}}</view> -->
+    </view>
+    <view class="right">
+      <view class="right_button"
+      wx:if="{{item.showCancel}}"
+      data-groupId="{{item._id}}"
+      data-adviceId="{{item.adviceId}}"
+      catchtap="cancel_advice" >
+        删除咨询
+      </view>
+    </view>
+  </view>
+</block>
+<view class="bottom" style="padding-bottom: {{bottom}}px;">
+  <button class="circle in_mid" bindtap="newRoom"
+    style="border-radius:40rpx;width:80rpx;height: 80rpx;padding:0;margin-bottom:50rpx;background-color:orange;">
+    +
+    <!--这个“+”是圆形按钮里面的内容-->
+  </button>
+</view>
+
+

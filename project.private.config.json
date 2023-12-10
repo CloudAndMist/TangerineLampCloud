@@ -15,28 +15,10 @@
     "miniprogram": {
       "list": [
         {
-          "name": "",
-          "pathName": "pages/index0/passage/developPassage/developPassage",
+          "name": "大模型咨询列表",
+          "pathName": "pages/index1/advice/llmroomList/llmroomList",
           "query": "",
           "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "个人页面",
-          "pathName": "pages/index3/index3",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "富文本测试",
-          "pathName": "pages/index2/myTest/editor",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "树洞首页",
-          "pathName": "pages/index2/index2",
-          "query": "",
           "scene": null
         }
       ]

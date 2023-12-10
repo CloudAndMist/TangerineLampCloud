@@ -12,7 +12,7 @@ Page({
 
   LLMAppointment(){
   wx.navigateTo({
-    url: '/pages/index1/advice/outerAppointment/outerAppointment'
+    url: '/pages/index1/advice/llmroomList/llmroomList'
   })
   },
 
