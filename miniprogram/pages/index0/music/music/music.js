@@ -10,9 +10,9 @@ Page({
   data: {
     //轮播图
     slides: [
-      { url: 'cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/swiper/1.jpg' },
-      { url: 'cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/swiper/2.jpg' },
-      { url: 'cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/swiper/3.jpg' }
+      { url: 'cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/music/swiper/倔强_coverImg.png' },
+      { url: 'cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/music/swiper/平凡之路_coverImg.png' },
+      { url: 'cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/music/swiper/起风了_coverImg.png' }
     ],
     item: 0,
     tab: 0,
@@ -23,7 +23,7 @@ Page({
       title: '请点击选择播放音乐',
       singer: 'Please choose a song',
       src: '',
-      coverImgUrl: 'cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/music/icon/music-default-icon.jpg'
+      coverImgUrl: '/icons/music-icon.jpg'
     }], 
     state: 'paused',
     playIndex: 0,
@@ -34,7 +34,7 @@ Page({
       percent: 0,
       title: '请点击选择播放音乐',
       singer: 'Please choose a song',
-      coverImgUrl: 'cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/music/icon/music-default-icon.jpg',
+      coverImgUrl: '/icons/music-icon.jpg',
       src: ''
     }
   },

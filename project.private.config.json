@@ -15,8 +15,20 @@
     "miniprogram": {
       "list": [
         {
+<<<<<<< Updated upstream
           "name": "大模型咨询列表",
           "pathName": "pages/index1/advice/llmroomList/llmroomList",
+=======
+          "name": "",
+          "pathName": "pages/index0/index0/index0",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/index0/passage/developPassage/developPassage",
+>>>>>>> Stashed changes
           "query": "",
           "launchMode": "default",
           "scene": null

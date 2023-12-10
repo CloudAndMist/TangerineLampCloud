@@ -21,8 +21,6 @@
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
-    "useApiHook": true,
-    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -36,19 +34,14 @@
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true
+    "minifyWXSS": true,
+    "ignoreUploadUnusedFiles": true
   },
   "appid": "wxe893bef10ce73cd3",
-  "projectname": "TangerineLamp",
-  "libVersion": "2.15.0",
   "compileType": "miniprogram",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
   "srcMiniprogramRoot": "miniprogram/",
   "editorSetting": {
     "tabIndent": "insertSpaces",
@@ -88,5 +81,11 @@
         }
       ]
     }
-  }
+  },
+  "libVersion": "2.15.0",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "projectname": "TangerineLampCloud"
 }
