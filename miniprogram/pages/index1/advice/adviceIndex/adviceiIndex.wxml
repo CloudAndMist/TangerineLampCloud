@@ -1,10 +1,18 @@
 <!--pages/adviceIndex/adviceiIndex.wxml-->
-<view class="advice" bindtap="outerAppointment">
+<!-- <view class="advice" bindtap="outerAppointment">
   <view class="aImg">
     <image src="/icons/index1_outerAppointment.png" alt=""></image>
   </view>
   <view class="des">
     线下咨询预约
+  </view>
+</view> -->
+<view class="advice" bindtap="LLMAppointment">
+  <view class="aImg">
+    <image src="/icons/index1_outerAppointment.png" alt=""></image>
+  </view>
+  <view class="des">
+    大模型在线咨询
   </view>
 </view>
 <view class="advice" bindtap="navToAppointment">

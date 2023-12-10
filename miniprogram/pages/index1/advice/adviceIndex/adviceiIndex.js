@@ -10,6 +10,12 @@ Page({
 
   },
 
+  LLMAppointment(){
+  wx.navigateTo({
+    url: '/pages/index1/advice/outerAppointment/outerAppointment'
+  })
+  },
+
   outerAppointment(){
     wx.navigateTo({
       url: '/pages/index1/advice/outerAppointment/outerAppointment'

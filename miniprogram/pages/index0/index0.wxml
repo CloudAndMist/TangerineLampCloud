@@ -15,7 +15,7 @@
   <!-- 每日分享：小文章，治愈歌单/书目，心理漫画，心理电台 -->
   <view class="daily">
     <!-- 文章 -->
-    <navigator url="/pages/index0/passage/passage" hover-class="navigator-hover" class="daily-item1">
+    <navigator url="/pages/index0/passage/passage/passage" hover-class="navigator-hover" class="daily-item1">
       <view class="daily-icon-passage">
         <image src="{{passageIconSrc}}"></image>
       </view>
@@ -30,7 +30,7 @@
     </navigator>
 
     <!-- 治愈歌单 -->
-    <navigator url="/pages/index0/music/music" hover-class="navigator-hover" class="daily-item2">
+    <navigator url="/pages/index0/music/music/music" hover-class="navigator-hover" class="daily-item2">
       <view class="daily-icon-music">
         <image src="{{musicIconSrc}}"></image>
       </view>
@@ -45,7 +45,7 @@
     </navigator>
   
     <!-- 心理漫画 -->
-    <navigator url="/pages/index0/comic/comic" hover-class="navigator-hover" class="daily-item3">
+    <navigator url="/pages/index0/comic/comic/comic" hover-class="navigator-hover" class="daily-item3">
       <view class="daily-icon-comic">
         <image src="{{comicIconSrc}}"></image>
       </view>
@@ -88,7 +88,7 @@
     <!-- 标题 -->
     <view class="title">
       <view class="titleTxt">最新文章</view>
-      <navigator class="more" url="/pages/index0/passage/passage">更多文章 > </navigator>
+      <navigator class="more" url="/pages/index0/passage/passage/passage">更多文章 > </navigator>
     </view>
     <!-- 展示内容主体 -->
     <view class="contentContainer">
@@ -119,7 +119,7 @@
     <!-- 标题 -->
     <view class="title">
       <view class="titleTxt">最新漫画</view>
-      <navigator class="more" url="/pages/index0/comic/comic">更多漫画 > </navigator>
+      <navigator class="more" url="/pages/index0/comic/comic/comic">更多漫画 > </navigator>
     </view>
     <!-- 展示内容主体 -->
     <view class="contentContainer">
