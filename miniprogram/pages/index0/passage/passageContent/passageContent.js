@@ -15,7 +15,7 @@ Page({
   data: {
     passage:{},
     // 默认是未收藏
-    collect_img_src:"cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/passage-longPicture/icon/collect-icon.png",
+    collect_img_src:"cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/passage-longPicture/icon/collect-icon.png",
     collect_text:"收藏"
   },
 
@@ -40,7 +40,7 @@ Page({
       isCollected = res.data.isCollected
       that.setData({
         passage:res.data,
-        collect_img_src: isCollected ? "cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/passage-longPicture/icon/collect-active-icon.png" : "cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/passage-longPicture/icon/collect-icon.png"
+        collect_img_src: isCollected ? "cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/passage-longPicture/icon/collect-active-icon.png" : "cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/passage-longPicture/icon/collect-icon.png"
       })
       // 从index0_passageCollect获取个人收藏文章记录
       db.collection("index0_passageCollect").where({
@@ -50,7 +50,7 @@ Page({
         if(res.total>0){
           isCollected = true
           that.setData({
-            collect_img_src:"cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/passage-longPicture/icon/collect-active-icon.png"
+            collect_img_src:"cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/passage-longPicture/icon/collect-active-icon.png"
           })
         }
       })
@@ -61,7 +61,7 @@ Page({
   collectClick() {
     this.setData({
       // 已收藏，再点一下取消收藏；未收藏，点击收藏
-      collect_img_src: isCollected ? "cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/passage-longPicture/icon/collect-icon.png" : "cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/passage-longPicture/icon/collect-active-icon.png"
+      collect_img_src: isCollected ? "cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/passage-longPicture/icon/collect-icon.png" : "cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/passage-longPicture/icon/collect-active-icon.png"
     })
     isCollected = !isCollected
     // 收藏状态更新至index0_passageCollect

@@ -129,13 +129,20 @@ Page({
 
   // 储存图片至云端
   cloudFile(introImageName,passageLongPictureName){
+    var that_1 = this.data.introImage
+    var that_2 = this.data.body
     wx.cloud.uploadFile({
       cloudPath:"index0/passage-longPicture/introImage/"+introImageName,
-      filePath:this.data.introImage
-    }).then(res=>{})
+      filePath:that_1
+    }).then(res=>{
+      console.log("success_1")
+    })
     wx.cloud.uploadFile({
       cloudPath:"index0/passage-longPicture/body/"+passageLongPictureName,
-      filePath:this.data.body
-    }).then(res=>{})
+      filePath:that_2
+    }).then(res=>{
+      console.log("success_2")
+    })
+
   }
 })
