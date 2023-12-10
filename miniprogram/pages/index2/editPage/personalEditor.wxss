@@ -23,7 +23,7 @@ page{
   color: #ff7733;
   font-size: 45rpx;
 	font-weight: bold;
-	font-family: 'Microsoft YaHei';
+	/* font-family: 'Microsoft YaHei'; */
 }
 /* 发表按钮的容器 */
 .publish_container {

@@ -90,7 +90,7 @@ Page({
         singer:this.data.singer,
         src:this.data.src,
         // cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/music/coverImg/C大调奏鸣曲_coverImg.jpg
-        coverImgUrl:"cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/music/coverImg/"+coverImgName,
+        coverImgUrl:"cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/music/coverImg/"+coverImgName,
         pushTime:pushTime
       }
     })

@@ -120,8 +120,8 @@ Page({
         title:this.data.title,
         author:this.data.author,
         des:this.data.des,
-        image:"cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/comic/coverImage/"+imageName,
-        content: new Array("cloud://tangerine-cloud-9grdz5e80159e7b3.7461-tangerine-cloud-9grdz5e80159e7b3-1304921980/index0/comic/comicContent/"+contentName),
+        image:"cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/comic/coverImage/"+imageName,
+        content: new Array("cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/index0/comic/comicContent/"+contentName),
         pushTime:pushTime
       }
     })
