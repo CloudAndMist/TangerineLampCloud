@@ -65,6 +65,27 @@ Component({
           scrollTop: 100000,
         })
 
+        /*
+
+        ---------------------------------------------------------------
+
+
+        */
+
+        // let hhh = this.data.chats.map(chat => {
+        //   if (chat._openid === this.data.openId) {
+        //     return {
+        //       role: 'user',
+        //       content: chat.textContent,
+        //     }
+        //   } else return {
+        //     role: 'assistant',
+        //     content: chat.textContent,
+        //   }
+        // })
+
+        // console.log("hhh: ", hhh)
+
         this.initWatch(initList.length ? {
           sendTimeTS: _.gt(initList[initList.length - 1].sendTimeTS),
         } : {})
@@ -152,6 +173,37 @@ Component({
       }
     },
 
+    sleep(numberMillis) {
+      var now = new Date();
+      var exitTime = now.getTime() + numberMillis;
+      while (true) {
+        now = new Date();
+        if (now.getTime() > exitTime)
+          return;
+      }
+    },
+
+    async getLLMResponse(promptList){
+      // this.sleep(2000)
+      wx.request({
+        url: 'http://110.41.175.204:8000/chatApi',
+        data: {
+          prompt: [ {role: "user", content: "蓝牙耳机坏了是去医院挂耳科还是牙科？"}]
+        },
+        header: {
+          'content-type': 'application/json' // 默认值
+          // 'content-type': 'application/x-www-form-urlencoded'
+        },
+        method: 'POST',
+        success (res) {
+          console.log('success.')
+          console.log(res.data.response)
+          return res.data.response
+        }
+      })
+      // return "大模型自动回复..."
+    },
+
     async onConfirmSendText(e) {
       this.try(async () => {
         if (!e){
@@ -210,34 +262,106 @@ Component({
                        修改发送文本后的返回消息
             ---------------------------------------------
         */
-        const doc_2 = {
-          _id: `${Math.random()}_${Date.now()}`,
-          _openid: '0',
-          groupId: this.data.groupId,
-          //avatar: this.data.userInfo.avatarUrl,
-          avatar:"cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/avatar/机器人.png",
-          nickName: 'LLM',
-          msgType: 'text',
-          textContent: 'LLM自动回复...',
-          sendTime: new Date(),
-          sendTimeTS: Date.now(), // fallback
-        }
+        let promptList = this.data.chats.map(chat => {
+          if (chat._openid === this.data.openId) {
+            return {
+              role: 'user',
+              content: chat.textContent,
+            }
+          } else return {
+            role: 'assistant',
+            content: chat.textContent,
+          }
+        })
+        
+        promptList[0].content = '假设你是一个心理咨询医师，下面有患者向你提问，请你使用委婉的语气与患者进行沟通，以下是他的问题：' + promptList[0].content
 
-        db.collection(collection).add({
-          data: doc_2,
+        console.log(promptList)
+        wx.showLoading({
+          title: '等待大模型响应...',
         })
 
-        this.setData({
-          textInputValue: '',
-          chats: [
-            ...this.data.chats,
-            {
-              ...doc_2,
+        var that = this
+
+        wx.request({
+          url: 'http://110.41.175.204:8000/chatApi',
+          data: {
+            prompt: promptList
+          },
+          header: {
+            'content-type': 'application/json' // 默认值
+            // 'content-type': 'application/x-www-form-urlencoded'
+          },
+          method: 'POST',
+          success (res) {
+            console.log('success.')
+            console.log(res.data.response)
+            let LLMResponse = res.data.response
+            const doc_2 = {
+              _id: `${Math.random()}_${Date.now()}`,
               _openid: '0',
-              writeStatus: 'written',
-            },
-          ],
+              groupId: that.data.groupId,
+              //avatar: this.data.userInfo.avatarUrl,
+              avatar:"cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/avatar/机器人.png",
+              nickName: 'LLM',
+              msgType: 'text',
+              textContent: LLMResponse,
+              sendTime: new Date(),
+              sendTimeTS: Date.now(), // fallback
+            }
+            
+            db.collection(collection).add({
+              data: doc_2,
+            })
+
+            that.setData({
+              textInputValue: '',
+              chats: [
+                ...that.data.chats,
+                {
+                  ...doc_2,
+                  _openid: '0',
+                  writeStatus: 'written',
+                },
+              ],
+            })
+
+            wx.hideLoading();
+
+          }
         })
+
+        
+        
+
+        // const doc_2 = {
+        //   _id: `${Math.random()}_${Date.now()}`,
+        //   _openid: '0',
+        //   groupId: this.data.groupId,
+        //   //avatar: this.data.userInfo.avatarUrl,
+        //   avatar:"cloud://mobile-app-dev-5ghxm1jwd77edd2b.6d6f-mobile-app-dev-5ghxm1jwd77edd2b-1323023468/avatar/机器人.png",
+        //   nickName: 'LLM',
+        //   msgType: 'text',
+        //   textContent: LLMResponse,
+        //   sendTime: new Date(),
+        //   sendTimeTS: Date.now(), // fallback
+        // }
+
+        // db.collection(collection).add({
+        //   data: doc_2,
+        // })
+
+        // this.setData({
+        //   textInputValue: '',
+        //   chats: [
+        //     ...this.data.chats,
+        //     {
+        //       ...doc_2,
+        //       _openid: '0',
+        //       writeStatus: 'written',
+        //     },
+        //   ],
+        // })
 
         // this.setData({
         //   chats: this.data.chats.map(chat => {

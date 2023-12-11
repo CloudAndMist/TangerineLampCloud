@@ -74,7 +74,8 @@
     "pages/index0/comic/comic/comic",
     "pages/index0/music/music/music",
     "pages/index1/advice/llmroomList/llmroomList",
-    "pages/index1/advice/room_llm/room_llm"
+    "pages/index1/advice/room_llm/room_llm",
+    "pages/testPost/testPost"
   ],
   "window": {
     "backgroundTextStyle": "light",
